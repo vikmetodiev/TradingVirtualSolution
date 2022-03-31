@@ -1,0 +1,82 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "../node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "../node_modules/@openzeppelin/contracts/utils/Counters.sol";
+import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
+
+contract CointoolNFT is ERC721, Ownable {
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIdCounter;
+
+    uint public mintPrice;
+    uint public startTime = block.timestamp;
+    uint public endTime = 0;
+    bool public publicMint = true;
+    uint public userMaxMint = 0;
+    uint public maxSupply = 0;
+    string public cover = "";
+
+    event MintPriceUpdated(uint price);
+    event PublicMintStatusChanged(bool enabled);
+    event CoverUpdated(string cover);
+
+    constructor() ERC721("CointoolNFT", "CFT") Ownable() {}
+
+    function _baseURI() internal pure override returns (string memory) {
+        return "";
+    }
+    
+    modifier withinTime() {
+        require(block.timestamp >= startTime, "Not started yet.");
+        if (endTime != 0) {
+            require(block.timestamp <= endTime, "Deadline expired.");
+        }
+        _;
+    }
+
+    modifier publicMintable() {
+        if (!publicMint) {
+            require(owner() == _msgSender(), "Only admin can mint");
+        }
+        _;
+    }
+
+    modifier withinMaxPerUserLimit() {
+        if (userMaxMint != 0) {
+            require(balanceOf(_msgSender()) < userMaxMint, "Mint limit exceeded");
+        }
+        _;
+    }
+
+    function updateMintPrice(uint price) public onlyOwner() {
+        mintPrice = price;
+        emit MintPriceUpdated(price);
+    }
+
+    function updatePublicMint(bool enable) public onlyOwner() {
+        publicMint = enable;
+        emit PublicMintStatusChanged(enable);
+    }
+
+    function updateCover(string memory cover_) public onlyOwner() {
+        cover = cover_;
+        emit CoverUpdated(cover_);
+    }
+
+    function mint(address to) public payable withinTime() publicMintable() withinMaxPerUserLimit() returns (uint) {
+        if (owner() != _msgSender()) {
+            require(msg.value == mintPrice, "Not enough fund");
+        }
+        if (userMaxMint != 0) {
+            require(balanceOf(_msgSender()) < userMaxMint, "Limit exceeded");
+        }
+        if (maxSupply != 0) {
+            require(_tokenIdCounter.current() < maxSupply, "Supply Limit exceeded");
+        }
+        _tokenIdCounter.increment();
+        _safeMint(to, _tokenIdCounter.current());
+        return _tokenIdCounter.current();
+    }
+
+}

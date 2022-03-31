@@ -1,0 +1,50 @@
+{
+  "name": "new-nextjs",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@pinata/sdk": "^1.1.23",
+    "@uiw/react-codemirror": "^4.2.4",
+    "@usedapp/core": "^0.5.4",
+    "@web3-react/walletconnect-connector": "^6.2.8",
+    "ethers": "5.4.1",
+    "formidable": "^2.0.1",
+    "next": "12.0.3",
+    "next-connect": "^0.11.0",
+    "react": "17.0.2",
+    "react-countdown": "^2.3.2",
+    "react-datepicker": "^4.7.0",
+    "react-dom": "17.0.2",
+    "react-toast-notifications": "^2.5.1",
+    "solc": "^0.8.0",
+    "types-solc": "^1.0.1"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.3.3",
+    "@typechain/ethers-v5": "^8.0.2",
+    "@typechain/hardhat": "^3.0.0",
+    "@types/formidable": "^2.0.1",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "16.11.7",
+    "@types/react": "17.0.34",
+    "@types/uuid": "^8.3.3",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "eslint": "7",
+    "eslint-config-next": "12.0.3",
+    "ethereum-waffle": "^3.4.0",
+    "hardhat": "^2.6.8",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "ts-node": "^10.4.0",
+    "typechain": "^6.0.2",
+    "typescript": "4.4.4"
+  }
+}
