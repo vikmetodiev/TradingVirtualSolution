@@ -133,119 +133,58 @@ const ManageTokenIndex: NextPage<Props> = ({ clientID }) => {
           <BuilderSidebar />
 
           <div className='auditingCenterSection'>
- <h1 style={{textAlign:"center"}} className="nft-create-header">NFT<span> Create</span></h1>
+ <h1 style={{textAlign:"center"}} className="nft-create-header">NFT<span> Asset</span></h1>
           <p className='token-headline' style={{color:"#B35EC8"}}>
             headline goes here
           </p>
-          <div className='input-container'>
-            <i className=' icon search'>
-              <img src='/images/searchicon.png' alt='' />
-            </i>
-            <div className='input-divider-left' />
-            <input
-              className='input-field'
-              type='text'
-              placeholder='Bitcoin'
-              name='Bitcoin'
-            />
-            <div className='input-divider-right' />
-            <span className='input-searchtext-right'>SEARCH</span>
+          <div
+            style={{ position: 'relative' }}
+            className='aboutCardsContainer '
+          ><div
+          style={{
+            width: '367px',
+            height:"367px",
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <div className='aboutCards' style={{ zIndex: 9999, width:"367px",display:"block" }}>
+          <span className='audit-tokenname'>NFT Details</span>
+          <div className='audit-coin-name-abbrevation-value' style={{width:"auto"}}>
+              <span>Contact Address:</span><span style={{marginLeft:13, color:"#B35EC8"}}>0x3756..8456789</span>
+              </div><div className='audit-coin-name-abbrevation-value' style={{top:100,width:"auto"}}>
+              <span>Blockchain:</span><span className="basic-span" style={{marginLeft:134}}>Rinkeby</span></div><div className='audit-coin-name-abbrevation-value' style={{top:140,width:"auto"}}>
+              <span>Name:</span><span className="basic-span" style={{marginLeft:198}}>dsfsd</span></div><div className='audit-coin-name-abbrevation-value' style={{top:180,width:"auto"}}>
+              <span>Symbol:</span><span className="basic-span" style={{marginLeft:208}}>dd</span></div><div className='audit-coin-name-abbrevation-value' style={{top:220,width:"auto"}}>
+              <span>Start time:</span><span className="basic-span" style={{marginLeft:22}}>18-1-2022, 2:48:29 PM</span></div><div className='audit-coin-name-abbrevation-value' style={{top:260,width:"auto"}}>
+              <span>End time:</span><span className="basic-span" style={{marginLeft:33}}>21-1-2022, 2:48:29 PM</span></div><div className='audit-coin-name-abbrevation-value' style={{top:300,width:"auto"}}>
+              <span>Already minted:</span><span className="basic-span" style={{marginLeft:155}}>0</span></div>
+          
           </div>
-          <div className='auditingmain mint-manager-scroll' style={{padding:"0 25px"}}>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-              <div className='audit-tokenname-section'>
-                <span className='audit-tokenname'>Name</span>
+        </div>
+        <div
 
-                <span className='audit-coin-name-abbrevation-value'>Dasd</span>
+                style={{
+                  width: '367px',
+                  height:" 367px",
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
+              >
+                <div className='aboutCards' style={{ zIndex: 9999, width:"367px" }}>
+                <span className='audit-tokenname'>Mint price</span>
+                <div className='audit-coin-name-abbrevation-value' style={{width:"auto"}}>
+              <span style={{fontSize:40}}>0.0 rETH</span><span style={{marginLeft:13}}>(0 USD)</span>
               </div>
-              <div className='audit-tokenname-section'>
-                {' '}
-                <span className='audit-coin-name-abbrevation'>
-                Symbol
-                </span>
-                <span className='audit-coin-name-abbrevation-value'>Enter Symbol</span>
-              </div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-              <div className='audit-tokenname-section' style={{textAlign:"center"}}>
-                <span className='audit-tokenname'>Image</span>
-
-                <span className='audit-coin-name-abbrevation-value'>+</span>
-              </div>
-              <div className='audit-tokenname-section'>
-                {' '}
-                <span className='audit-coin-name-abbrevation'>
-                Use Image Url
-                </span>
-                <span className='audit-coin-name-abbrevation-value'>http://</span>
-              </div>
-            </div>
-            <div className='audit-coin-address-section border-left-before bg-big-card'>
-              <span className='audit-coin-address'>Description</span>
-              <span className='audit-coin-address-value'>
-                Enter description
-              </span>
-            </div>
-            
-
-            <div style={{display:"flex"}}>
-            <div className="token__toggle public-mint" style={{marginTop: "27px",
-    marginLeft:" 38px",
-    marginRight: "17px"}}>
-                  <p>Public Mint</p>
-  
-                  <div className="toggle">
-                    <input type="checkbox" name="" id="toggle" />
-                    <label htmlFor="toggle">
-                      <span className="toggle-inner"></span>
-                      <span className="toggle-button"></span>
-                    </label>
-                  </div>
                 </div>
-                <div className='audit-coin-address-section border-left-before bg-big-card' style={{width:"100%"}}>
-              <span className='audit-coin-address'>Description</span>
-              <span className='audit-coin-address-value'>
-                Enter description
-              </span>
-            </div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly',alignItems:"center" }}>
-            <div className='audit-tokenname-section' style={{display:"flex",alignItems:"center"}}>
-              <span className='audit-tokenname'>Deadline</span>
-              <span className='audit-coin-name-abbrevation-value' style={{width:"auto"}}>01/18/2022 12:44PM</span>
-              <span style={{position:"absolute",right:25}}><img src="/images/calendar.png" /><img src="/images/clock.png" style={{margin:"0 20px"}}/></span>
-            </div>
-            <div className='audit-tokenname-section' style={{display:"flex",alignItems:"center"}}>
-              <span className='audit-tokenname'>Deadline</span>
-              <span className='audit-coin-name-abbrevation-value' style={{width:"auto"}}>01/18/2022 12:44PM</span>
-              <span style={{position:"absolute",right:25}}><img src="/images/calendar.png" /><img src="/images/clock.png" style={{margin:"0 20px"}}/></span>
-            </div>
-            </div>
-            <div className='audit-coin-address-section border-left-before bg-big-card'>
-              <span className='audit-coin-address'>Contact Address:</span>
-              <span className='audit-coin-address-value'>
-                0x001b23c12ax13k123ab32cb...
-              </span>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-              <div className='audit-tokenname-section'>
-                <span className='audit-tokenname'>User max mint (0 for no limit)</span>
-
-                <span className='audit-coin-name-abbrevation-value'>0</span>
+                <div style={{position:"absolute", bottom:60,zIndex:10000}}><span style={{fontSize:15}}>Mint status:</span><span className="basic-span" style={{marginLeft:155}}>Public</span></div>
               </div>
-              <div className='audit-tokenname-section'>
-                {' '}
-                <span className='audit-coin-name-abbrevation'>
-                Total supply (0 for no limit)
-                </span>
-                <span className='audit-coin-name-abbrevation-value'>0</span>
+              
               </div>
-            </div>
 
-<div style={{display:"flex",justifyContent:"center",marginBottom:25}}>
-            <button className="token-manager" style={{maxWidth:250}}>Deploy Contract</button>
+          <div style={{display:"flex",justifyContent:"center",marginBottom:25}}>
+            <button className="token-manager" style={{maxWidth:250}}>Mint</button>
             </div>
-          </div>
         </div>
         <div>
           <Widgets />

@@ -31,7 +31,7 @@ import Link from "next/link";
 import CopyToClipboard from "../../components/copy-to-clipboard/CopyToClipboard";
 import { Navbar } from "../../components/navbar/navbar";
 import { Footer } from "../../components/footer";
-import DatePicker, { registerLocale } from "react-datepicker";
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 const { Interface, parseUnits } = utils;
 

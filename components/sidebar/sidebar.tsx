@@ -115,10 +115,10 @@ export function Sidebar(): JSX.Element {
         </li>
         <li>
           <a
-            href="/manage/presale"
+            href="/consultation"
             className={
-              router.pathname.startsWith("/manage/presale")
-                ? "link-active link-secondary-active"
+              router.pathname.startsWith("/consultation")
+                ? "link-active link-secondary-active home"
                 : ""
             }
           >
@@ -128,7 +128,7 @@ export function Sidebar(): JSX.Element {
               </svg>
             </span>
 
-            <p>Manage Presale</p>
+            <p>Consultation</p>
           </a>
         </li>
         <li>

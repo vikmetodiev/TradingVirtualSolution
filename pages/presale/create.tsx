@@ -19,7 +19,7 @@ import CustomERC20 from "../../abis/CustomERC20.json";
 import { useToasts } from "react-toast-notifications";
 import { ITokenPresaleProps } from "../../interfaces/ITokenPresaleProps";
 import { SecondaryNavbar } from "../../components/navbar/navbarsecondary";
-import { BuilderSidebar } from "../../components/sidebar/buildersidebar";
+import { Sidebar } from "../../components/sidebar/sidebar";
 import { Widgets } from "../../components/widgets/widgets";
 import { NATIVE_CURRENCY } from "../../constants/networks";
 import { getSupportedChainId } from "../../utils/NumberUtils";
@@ -204,8 +204,9 @@ const ManageTokenIndex: NextPage = () => {
       <img src="/images/bg-3.png" className="auditing-bg-image"/>
       <main id="main">
         <div className="container container-builder">
-          <BuilderSidebar />
+          <Sidebar />
 
+          <section className='minter'>
         {!continueBtn ? <div className='auditingCenterSection'>
 <h1 style={{textAlign:"center"}} className="token-presale">Token<span> Presale</span></h1>
         <p className='presale-headline'>
@@ -361,6 +362,7 @@ const ManageTokenIndex: NextPage = () => {
         </div>
         
       </div>}
+      </section>
 
         <div>
           <Widgets />

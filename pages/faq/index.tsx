@@ -32,14 +32,19 @@ const index = () => {
           
           <div className='auditingmain' style={{paddingTop:30}}>
             <span className='audit-link-address' style={{textAlign:"center",width:"100%",left:0, marginBottom: 10}}>Put email in here to recovery update on When Husband goes live</span>
-            <div className='audit-link-address-section' >
-              <span className='audit-link-address'>E-mail</span>
-              <span className='audit-link-address-value' style={{display:"flex"}}> <img src="/images/Vector.png" style={{marginRight:10}} />Robot@gmail.com</span>
-              <div className='input-divider-right' />
-            <span className='input-searchtext-right'>CONFRIRM</span>
+            <div className='faq-main-section' >
+                <div className="faq-section">
+                    <span>Virtual Trading - Is it?</span><img src="/images/arrow.png" />
+                </div>
+                <div className="faq-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac dolor eu dui semper sodales. Integer ultricies sem a maximus condimentum. Curabitur feugiat, quam ac finibus tempor, magna nisi vehicula ligula, ut elementum nisl ligula non odio. In rhoncus eu nisl nec dapibus. Mauris congue posuere pharetra. Suspendisse nunc mauris, tempus quis tortor 
+                </div>
             </div>
-            <div style={{display:"flex", justifyContent:"center"}}>
-                <img src="/images/cat.png" style={{width:"100%",marginTop:-150}}/>
+            <div className="faq-secondary-question">
+            <span>Why us</span><img src="/images/arrow.png" />
+            </div>
+            <div className="faq-secondary-question">
+            <span>How to contact us</span><img src="/images/arrow.png" />
             </div>
           </div>
         </div>
@@ -47,7 +52,7 @@ const index = () => {
       </div>
       <img src="/images/Ellipse-56.png" className="first-orb-faq"/>
       <img src="/images/Ellipse-57.png"   className="second-orb-faq"/>
-      <div style={{ marginBottom: '20px',paddingLeft:45,paddingRight:45 }} className='aboutCopyright'>
+      <div style={{ marginBottom: '20px',paddingLeft:45,paddingRight:45, marginTop:35 }} className='aboutCopyright'>
         <div className='copyright'>Copyright</div>
         <div className='socialVectors'>
           <img style={{ marginLeft: '20px' }} src='/images/Vector-1.png' />

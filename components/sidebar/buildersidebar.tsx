@@ -114,16 +114,16 @@ export function BuilderSidebar(): JSX.Element {
         </li>
         <li>
           <a
-            href="/manage/presale"
+            href="/consultation"
             className={
-              router.pathname.startsWith("/manage/presale")
+              router.pathname.startsWith("/consultation")
                 ? "link-active link-secondary-active"
                 : ""
             }
           >
             <span>
               <svg>
-                <use xlinkHref="/icons/sprite.svg#icon-chat"></use>
+                <use xlinkHref="/icons/sprite.svg#icon-chat home"></use>
               </svg>
             </span>
 

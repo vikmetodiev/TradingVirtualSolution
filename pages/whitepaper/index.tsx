@@ -39,7 +39,7 @@ const index = () => {
             <span className='input-searchtext-right'>CONFRIRM</span>
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
-                <img src="/images/cat.png" style={{width:"100%",marginTop:-150}}/>
+                <img src="/images/cat.png" className="cat-image"/>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ const index = () => {
       </div>
       <img src="/images/Ellipse-56.png" className="first-orb-whitepaper"/>
       <img src="/images/Ellipse-57.png"   className="second-orb-whitepaper"/>
-      <div style={{ marginBottom: '20px',paddingLeft:45,paddingRight:45 }} className='aboutCopyright'>
+      <div style={{ marginBottom: '20px',paddingLeft:45,paddingRight:45, marginTop:35 }} className='aboutCopyright'>
         <div className='copyright'>Copyright</div>
         <div className='socialVectors'>
           <img style={{ marginLeft: '20px' }} src='/images/Vector-1.png' />

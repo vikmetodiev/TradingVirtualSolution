@@ -1479,6 +1479,19 @@ svg {
 }
 
 @media (max-width: 43.75em) {
+  #wrapper,
+  .aboutUs {
+    overflow: auto !important;
+    height: auto !important;
+  }
+
+  .aboutEllipse2 {
+    display: none;
+  }
+
+  .aboutEllipse1 {
+    display: none;
+  }
   .token__bar {
     -ms-grid-columns: (1fr) [2];
     grid-template-columns: repeat(2, 1fr);
@@ -2187,7 +2200,45 @@ svg {
   }
 }
 
+.cat-image {
+  width: 100%;
+  margin-top: -150px;
+}
+
 @media (max-width: 1050px) {
+  #wrapper,
+  .aboutUs {
+    overflow: auto !important;
+    height: auto !important;
+  }
+
+  .cat-image {
+    margin-top: 0;
+    width: 150%;
+  }
+
+  .aboutEllipse2 {
+    display: none;
+  }
+
+  .aboutEllipse1 {
+    display: none;
+  }
+
+  .audit-tokenname-section {
+    max-width: 150px;
+    overflow: hidden;
+  }
+
+  .audit-coin-address-section {
+    overflow: hidden;
+  }
+
+  .token-minting-bg-card {
+    max-width: 100px !important;
+    overflow: hidden;
+    margin: 2px;
+  }
   .navbar {
     padding-top: 2rem;
   }
@@ -2197,7 +2248,7 @@ svg {
   }
   .navbar__logo {
     width: 140px;
-    margin-left: 0;
+    margin-left: 10px;
   }
   .navbar__progress {
     display: none;
@@ -2496,6 +2547,46 @@ svg {
   filter: invert(52%) sepia(96%) saturate(413%) hue-rotate(737deg) brightness(94%) contrast(95%) !important;
 }
 
+.consultation .react-datepicker {
+  left: 0px !important;
+  top: 0px !important;
+}
+
+.consultation .react-datepicker__current-month {
+  color: #2a78fb !important;
+}
+
+.consultation .react-datepicker__day--today {
+  color: #2a78fb !important;
+}
+
+.consultation .react-datepicker__day--selected {
+  background-color: #2a78fb !important;
+  color: black !important;
+}
+
+.nft-create-header {
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 90px;
+}
+
+.nft-create-header span {
+  color: #b35ec8;
+}
+
+.nft-create-wrapper {
+  background: linear-gradient(179.17deg, #8e43a1 -80.49%, #131515 98.83%);
+}
+
+.nft-create-button p {
+  color: #b35ec8;
+}
+
+.nft-create-button svg {
+  filter: invert(80%) sepia(100%) saturate(1459%) hue-rotate(265deg) brightness(100%) contrast(97%) !important;
+}
+
 .react-datepicker {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 127.46%) !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 4px 25px rgba(0, 0, 0, 0.05) !important;
@@ -2602,6 +2693,9 @@ svg {
   bottom: 69px;
   left: 47%;
   width: 29%;
+}
+
+.faq-section {
 }
 
 .second-orb-faq {
@@ -3190,6 +3284,81 @@ top: 810px; */
   border-radius: 35px;
   /* transform: rotate(90deg); */
 }
+
+.faq-main-section {
+  position: relative;
+  height: 240px;
+  margin-top: 27px;
+  margin-left: 25px;
+  margin-right: 25px;
+  background: linear-gradient(106.11deg, rgba(23, 23, 23, 0.12) -159.28%, rgba(0, 0, 0, 0) 108.88%);
+  box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.05));
+  backdrop-filter: blur(100px);
+  padding: 15px;
+  border-radius: 35px;
+  overflow: hidden;
+}
+
+.faq-section {
+  border-bottom: 1px solid;
+  color: #2a78fb;
+  margin-right: 25px;
+  margin-left: 25px;
+  padding-bottom: 15px;
+}
+
+.faq-section span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+  margin-top: 25px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #2a78fb;
+}
+
+.faq-section img {
+  float: right;
+  margin-top: 15px;
+}
+
+.faq-secondary-question {
+  margin: 40px;
+  border-bottom: 1px solid #3a4552;
+  padding-bottom: 15px;
+}
+
+.faq-secondary-question span {
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  opacity: 0.2;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.faq-secondary-question img {
+  float: right;
+}
+
+.faq-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 30px;
+  /* or 250% */
+
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+
+  opacity: 0.2;
+  margin: 10px 25px;
+}
+
 .audit-coin-address {
   position: absolute;
   /* width: 95px; */
